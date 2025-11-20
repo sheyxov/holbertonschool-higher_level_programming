@@ -22,4 +22,3 @@ def roman_to_int(roman_string):
         prev = val
 
     return total
-
