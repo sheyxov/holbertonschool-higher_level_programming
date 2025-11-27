@@ -2,7 +2,7 @@
 """Salam"""
 
 
-class MyList:
+class MyList(list):
     """
     A custom list class that inherits from list
     and provides a method to print the list sorted.
