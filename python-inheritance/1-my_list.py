@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Salam"""
+"""
+This module defines the MyList class.
+The MyList class inherits from the built-in list type and
+provides a method to print a sorted version of the list
+without modifying the original order of elements.
+"""
 
 
 class MyList(list):
