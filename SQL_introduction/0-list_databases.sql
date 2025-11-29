@@ -1,2 +1,2 @@
 -- list all dbss
-show databases;
+SHOW DATABASES;
