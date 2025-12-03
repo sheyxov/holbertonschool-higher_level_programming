@@ -9,5 +9,6 @@ if __name__ == "__main__":
     req = urllib.request.Request(url)
 
     with urllib.request.urlopen(req) as response:
-        header = response.headers
-        print(headers.get("X-Request-Id"))
+        # Work in all Python versions used by Holberton sandbox
+        x_request_id = response.getheader("X-Request-Id")
+        print(x_request_id)
