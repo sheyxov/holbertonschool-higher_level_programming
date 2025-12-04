@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products</title>
+    <style>
+        table {border-collapse: collapse; width: 60%; margin: 20px;}
+        th, td {border: 1px solid #333; padding: 8px; text-align: left;}
+        th {background: #eee;}
+    </style>
+</head>
+<body>
+
+<h1>Product List</h1>
+
+{% if error %}
+    <p style="color:red">{{ error }}</p>
+{% endif %}
+
+{% if products and products|length > 0 %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price ($)</th>
+    </tr>
+
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <p>No products available.</p>
+{% endif %}
+
+</body>
+</html>
